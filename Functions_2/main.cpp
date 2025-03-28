@@ -1,4 +1,6 @@
 #include<iostream>
+#include<ctime>
+
 using namespace std;
 //-----------------------------------------------
 void FillRand(int arr[], const int n);
@@ -39,6 +41,7 @@ void main()
 }
 void FillRand(int arry[], const int n)
 {
+	srand(time(NULL));
 	for (int i = 0; i < n; i++)
 	{
 		arry[i] = rand() % 100;
@@ -79,7 +82,7 @@ int Avg(int arry[], int n)
 }
 int MinValueIn(int arry[], int n)
 {
-	int min = 0;
+	int min = 1000;
 	for (int i = 0; i < n; i++)
 	{
 		if (min > arry[i]) min = arry[i];
