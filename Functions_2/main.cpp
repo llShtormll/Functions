@@ -105,7 +105,7 @@ void ShiftLeft(int arry[], const int n, int t)
 			int buffer = arry[j+1];
 			arry[j + 1] = arry[j];
 			arry[j] = buffer;
-		}
+		} 
 	}
 }
 void ShiftRight(int arry[], const int n, int t)
