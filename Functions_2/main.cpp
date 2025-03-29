@@ -1,5 +1,4 @@
 #include<iostream>
-#include<ctime>
 
 using namespace std;
 //-----------------------------------------------
@@ -15,7 +14,7 @@ void ShiftRight(int arry[], int n, int t);
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int n = 15;
+	const int n = 13;
 	int arry[n], t = 5;
 	 FillRand(arry, n);
 	 Sort(arry, n);
@@ -45,7 +44,7 @@ void main()
 }
 void FillRand(int arry[], const int n)
 {
-	srand(time(NULL));
+	
 	for (int i = 0; i < n; i++)
 	{
 		arry[i] = rand() % 100;
