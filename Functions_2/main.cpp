@@ -6,7 +6,7 @@ using namespace std;
 void FillRand(int arr[], const int n);
 void Sort(int arry[], int n);
 int Sum(int arry[], int n);
-int Avg(int arry[], int n);
+double Avg(int arry[], int n);
 int MinValueIn(int arry[], int n);
 int MaxValueIn(int arry[], int n);
 void ShiftLeft(int arry[], int n, int t);
@@ -40,7 +40,7 @@ void main()
 	cout << endl;
 	cout << "Сумма элементов масива :" << Sum(arry, n);
 	cout << endl;
-	cout << "Среднее арифметическое :" << Avg(arry, n);
+	cout << "Среднее арифметическое :" << (double)Avg(arry, n);
 	cout << endl;
 }
 void FillRand(int arry[], const int n)
@@ -75,7 +75,7 @@ int Sum(int arry[], int n)
 	}
 	return summ;
 }
-int Avg(int arry[], int n)
+double Avg(int arry[], int n)
 {
 	int summ = 0;
 	for (int i = 0; i < n; i++)
