@@ -5,7 +5,7 @@ using namespace std;
 void FillRand(int arr[], const int n);
 void Print(int arr[], const int n);
 void Sort(int arr[], const int n);
-int Sum(int arr[], int n);
+int Sum(int arr[], const int n);
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -62,7 +62,7 @@ void Sort(int arr[], const int n)
 
 	}
 }
-int Sum(int arr[], int n)
+int Sum(int arr[], const int n)
 {
 	int sum = 0;
 	for (int i = 0; i < n; i++)
@@ -70,4 +70,8 @@ int Sum(int arr[], int n)
 		sum += arr[i];
 	}
 	return sum;
+}
+double Avg(int arry[], const int n)
+{
+	return (double)Sum(arry, n) / n;
 }

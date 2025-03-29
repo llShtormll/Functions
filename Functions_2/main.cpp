@@ -3,13 +3,13 @@
 using namespace std;
 //-----------------------------------------------
 void FillRand(int arr[], const int n);
-void Sort(int arry[], int n);
-int Sum(int arry[], int n);
-double Avg(int arry[], int n);
-int MinValueIn(int arry[], int n);
-int MaxValueIn(int arry[], int n);
-void ShiftLeft(int arry[], int n, int t);
-void ShiftRight(int arry[], int n, int t);
+void Sort(int arry[], const int n);
+int Sum(int arry[], const int n);
+double Avg(int arry[], const int n);
+int MinValueIn(int arry[], const int n);
+int MaxValueIn(int arry[], const int n);
+void ShiftLeft(int arry[], const int n, int t);
+void ShiftRight(int arry[], const int n, int t);
 //-----------------------------------------------
 void main()
 {
@@ -65,7 +65,7 @@ void Sort(int arry[], int n)
 		}
 	}
 }
-int Sum(int arry[], int n)
+int Sum(int arry[], const int n)
 {
 		int summ = 0;
 	for (int i = 0; i < n; i++)
@@ -74,29 +74,29 @@ int Sum(int arry[], int n)
 	}
 	return summ;
 }
-double Avg(int arry[], int n)
+double Avg(int arry[], const int n)
 {
 	return (double)Sum(arry,n) / n;
 }
-int MinValueIn(int arry[], int n)
+int MinValueIn(int arry[], const int n)
 {
-	int min = 1000;
-	for (int i = 0; i < n; i++)
+	int min = arry[0];
+	for (int i = 1; i < n; i++)
 	{
 		if (min > arry[i]) min = arry[i];
 	}
 	return min;
 }
-int MaxValueIn(int arry[], int n)
+int MaxValueIn(int arry[], const int n)
 {
-	int max = 0;
+	int max = arry[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (max < arry[i]) max = arry[i];
 	}
 	return max;
 }
-void ShiftLeft(int arry[], int n, int t)
+void ShiftLeft(int arry[], const int n, int t)
 {
 	for (int i = 1; i <= t; i++)
 	{
@@ -108,7 +108,7 @@ void ShiftLeft(int arry[], int n, int t)
 		}
 	}
 }
-void ShiftRight(int arry[], int n, int t)
+void ShiftRight(int arry[], const int n, int t)
 {
 	for (int i = 1; i <= t; i++)
 	{
