@@ -76,12 +76,7 @@ int Sum(int arry[], int n)
 }
 double Avg(int arry[], int n)
 {
-	int summ = 0;
-	for (int i = 0; i < n; i++)
-	{
-		summ += arry[i];
-	}
-	return summ / n;
+	return (double)Sum(arry,n) / n;
 }
 int MinValueIn(int arry[], int n)
 {
