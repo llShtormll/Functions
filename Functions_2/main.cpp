@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 
 using namespace std;
 //-----------------------------------------------
@@ -37,9 +37,9 @@ void main()
 	cout << "ShiftRight {";
 	for (int i = 0; i < n; i++) cout << arry[i] << ", "; cout << "}";
 	cout << endl;
-	cout << "Ñóììà ýëåìåíòîâ ìàñèâà :" << Sum(arry, n);
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÐ¸Ð²Ð° :" << Sum(arry, n);
 	cout << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå :" << (double)Avg(arry, n);
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ :" << (double)Avg(arry, n);
 	cout << endl;
 }
 void FillRand(int arry[], const int n)
