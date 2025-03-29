@@ -39,7 +39,7 @@ void main()
 	cout << endl;
 	cout << "Сумма элементов масива :" << Sum(arry, n);
 	cout << endl;
-	cout << "Среднее арифметическое :" << (double)Avg(arry, n);
+	cout << "Среднее арифметическое :" << Avg(arry, n);
 	cout << endl;
 }
 void FillRand(int arry[], const int n)
