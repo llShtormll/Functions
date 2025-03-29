@@ -37,7 +37,11 @@ void main()
 	cout << endl;
 	cout << "ShiftRight {";
 	for (int i = 0; i < n; i++) cout << arry[i] << ", "; cout << "}";
-
+	cout << endl;
+	cout << "Сумма элементов масива :" << Sum(arry, n);
+	cout << endl;
+	cout << "Среднее арифметическое :" << Avg(arry, n);
+	cout << endl;
 }
 void FillRand(int arry[], const int n)
 {
