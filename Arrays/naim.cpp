@@ -1,12 +1,17 @@
 #include<iostream>
 
 using namespace std;
-
+#define delimiter "\n---------------------------------------\n"
+const int ROWS = 4;
+const int COLS = 5;
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
+void FillRand(int i_arr_2[ROWS][COLS], const int ROWS, const int COLS);
+
 
 void Print(int arr[], const int n);
-void Print(double	arr[], const int n);
+void Print(double arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWN, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -65,6 +70,26 @@ void main()
 	Sort(brr, SIZE);
 	cout << endl;
 	Print(brr, SIZE);
+	cout << endl;
+	cout << "              Двумерный масив" << endl;
+
+	cout << delimiter << endl;
+	
+
+
+	
+	int i_arr_2[ROWS][COLS] =
+	{
+		{3,5,8},
+		{13,21,34},
+		{55,89,144},
+	};
+
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
+
+
+	
 }
 
 void FillRand(int arr[], const int n)
@@ -82,6 +107,16 @@ void FillRand(double arr[], const int n)
 		arr[i] /= 100;
 	}
 }
+void FillRand(int i_arr_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			i_arr_2[i][j] = rand();
+		}
+	}
+}
 void Print(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -96,6 +131,20 @@ void Print(double arr[], const int n)
 		cout << arr[i] << "\t";
 	}cout << endl;
 }
+void Print(int i_arr_2[ROWS][COLS], const int ROWN, const int COLS)
+{
+	
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << i_arr_2[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
 void Sort(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
