@@ -37,7 +37,7 @@ void ShiftRight(double arry[], const int n, int t);
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int n = 10;
+	const int n = 11;
 	int arr[n];
 	FillRand(arr, n);
 	Print(arr, n);
