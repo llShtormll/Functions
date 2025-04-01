@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 const int ROWS = 3;
 const int COLS = 4;
@@ -44,10 +44,10 @@ void main()
 	cout << delimiter << endl;
 	Sort(Arr, ROWS, COLS);
 	Print(Arr, ROWS, COLS);
-	cout << "\nÑóììà ýëåìåíòîâ ìàñèâà :" << Sum(Arr, ROWS, COLS) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàñèâà :" << Avg(Arr, ROWS, COLS) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå ìàñèâà :" << MinValueIn(Arr, ROWS, COLS) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå ìàñèâà :" << MaxValueIn(Arr, ROWS, COLS) << endl;
+	cout << "\nÐ¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÐ¸Ð²Ð° :" << Sum(Arr, ROWS, COLS) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÐ¸Ð²Ð° :" << Avg(Arr, ROWS, COLS) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÐ¸Ð²Ð° :" << MinValueIn(Arr, ROWS, COLS) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÐ¸Ð²Ð° :" << MaxValueIn(Arr, ROWS, COLS) << endl;
 	ShiftLeft(Arr, ROWS, COLS, Shift);
 	Print(Arr, ROWS, COLS);
 	Sort(Arr, ROWS, COLS);
@@ -61,10 +61,10 @@ void main()
 	cout << delimiter << endl;
 	Sort(Drr, ROWS, COLS);
 	Print(Drr, ROWS, COLS);
-	cout << "\nÑóììà ýëåìåíòîâ ìàñèâà :" << Sum(Drr, ROWS, COLS) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàñèâà :" << Avg(Drr, ROWS, COLS) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå ìàñèâà :" << MinValueIn(Drr, ROWS, COLS) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå ìàñèâà :" << MaxValueIn(Drr, ROWS, COLS) << endl;
+	cout << "\nÐ¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÐ¸Ð²Ð° :" << Sum(Drr, ROWS, COLS) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÐ¸Ð²Ð° :" << Avg(Drr, ROWS, COLS) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÐ¸Ð²Ð° :" << MinValueIn(Drr, ROWS, COLS) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÐ¸Ð²Ð° :" << MaxValueIn(Drr, ROWS, COLS) << endl;
 	ShiftLeft(Drr, ROWS, COLS, Shift);
 	Print(Drr, ROWS, COLS);
 	Sort(Drr, ROWS, COLS);
@@ -244,7 +244,7 @@ double MaxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 }
 void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âëåâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð»ÐµÐ²Ð¾--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		int buf = arr[0][0];
@@ -261,7 +261,7 @@ void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 }
 void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âëåâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð»ÐµÐ²Ð¾--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		double buf = arr[0][0];
@@ -279,7 +279,7 @@ void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift
 
 void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âïðàâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð¿Ñ€Ð°Ð²Ð¾--------------------" << endl;
 	for (int f = 0; f < (ROWS*COLS) - Shift; f++)
 	{
 		int buf = arr[0][0];
@@ -296,7 +296,7 @@ void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 }
 void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shoft)
 {
-	cout << "\n---------------------Ñäâèã âïðàâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð¿Ñ€Ð°Ð²Ð¾--------------------" << endl;
 	for (int f = 0; f < (ROWS * COLS) - Shoft; f++)
 	{
 		double buf = arr[0][0];
