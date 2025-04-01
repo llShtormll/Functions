@@ -2,7 +2,7 @@
 using namespace std;
 const int ROWS = 3;
 const int COLS = 4;
-const int Shift = 5;
+const int Shift = 1;
 
 #define delimiter "\n---------------------------------------\n"
 
@@ -34,42 +34,34 @@ void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift
 void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
+void ShiftRight1(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
+
 void main()
 {
 	setlocale(LC_ALL, "");
 
 	int Arr[ROWS][COLS]{};
-	FillRand(Arr, ROWS, COLS);
-	Print(Arr, ROWS, COLS);
+	FillRand(Arr, ROWS, COLS); Print(Arr, ROWS, COLS);
 	cout << delimiter << endl;
-	Sort(Arr, ROWS, COLS);
-	Print(Arr, ROWS, COLS);
+	Sort(Arr, ROWS, COLS); Print(Arr, ROWS, COLS);
 	cout << "\nСумма элементов масива :" << Sum(Arr, ROWS, COLS) << endl;
 	cout << "Среднее арифметическое элементов масива :" << Avg(Arr, ROWS, COLS) << endl;
 	cout << "Минимальное значение масива :" << MinValueIn(Arr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Arr, ROWS, COLS) << endl;
-	ShiftLeft(Arr, ROWS, COLS, Shift);
-	Print(Arr, ROWS, COLS);
-	Sort(Arr, ROWS, COLS);
-	ShiftRight(Arr, ROWS, COLS, Shift);
-	Print(Arr, ROWS, COLS);
-		
+	ShiftLeft(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
+	ShiftRight(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
+
 	cout << delimiter << endl;
 	double Drr[ROWS][COLS];
-	FillRand(Drr, ROWS, COLS);
-	Print(Drr, ROWS, COLS);
+	FillRand(Drr, ROWS, COLS); Print(Drr, ROWS, COLS);
 	cout << delimiter << endl;
-	Sort(Drr, ROWS, COLS);
-	Print(Drr, ROWS, COLS);
+	Sort(Drr, ROWS, COLS); Print(Drr, ROWS, COLS);
 	cout << "\nСумма элементов масива :" << Sum(Drr, ROWS, COLS) << endl;
 	cout << "Среднее арифметическое элементов масива :" << Avg(Drr, ROWS, COLS) << endl;
 	cout << "Минимальное значение масива :" << MinValueIn(Drr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Drr, ROWS, COLS) << endl;
-	ShiftLeft(Drr, ROWS, COLS, Shift);
-	Print(Drr, ROWS, COLS);
-	Sort(Drr, ROWS, COLS);
-	ShiftRight(Drr, ROWS, COLS, Shift);
-	Print(Drr, ROWS, COLS);
+	ShiftLeft(Drr, ROWS, COLS, Shift); Print(Drr, ROWS, COLS); Sort(Drr, ROWS, COLS);
+	ShiftRight(Drr, ROWS, COLS, Shift); Print(Drr, ROWS, COLS);
 }
 
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -280,34 +272,36 @@ void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift
 void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
-	for (int f = 0; f < (ROWS*COLS) - Shift; f++)
+	for (int f = 0; f < Shift; f++)
 	{
-		int buf = arr[0][0];
-		for (int i = 0; i < ROWS; i++)
+		int buf = arr[ROWS - 1][COLS - 1];
+		for (int i = ROWS - 1; i >= 0; i--)
 		{
-			for (int j = 0; j < COLS; j++)
+			for (int j = COLS - 1; j >= 0; j--)
 			{
-				if (j == COLS - 1 && i < ROWS - 1)arr[i][j] = arr[i + 1][0];
-				else arr[i][j] = arr[i][j + 1];
+				if (j == 0 && i > 0)arr[i][j] = arr[i - 1][COLS - 1];
+				else arr[i][j] = arr[i][j - 1];
 			}
 		}
-		arr[ROWS - 1][COLS - 1] = buf;
+		arr[0][0] = buf;
+
 	}
 }
 void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shoft)
 {
 	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
-	for (int f = 0; f < (ROWS * COLS) - Shoft; f++)
+	for (int f = 0; f < Shoft; f++)
 	{
-		double buf = arr[0][0];
-		for (int i = 0; i < ROWS; i++)
+		double buf = arr[ROWS - 1][COLS - 1];
+		for (int i = ROWS - 1; i >= 0; i--)
 		{
-			for (int j = 0; j < COLS; j++)
+			for (int j = COLS - 1; j >= 0; j--)
 			{
-				if (j == COLS - 1 && i < ROWS - 1)arr[i][j] = arr[i + 1][0];
-				else arr[i][j] = arr[i][j + 1];
+				if (j == 0 && i > 0)arr[i][j] = arr[i - 1][COLS - 1];
+				else arr[i][j] = arr[i][j - 1];
 			}
 		}
-		arr[ROWS - 1][COLS - 1] = buf;
+		arr[0][0] = buf;
+
 	}
 }
