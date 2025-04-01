@@ -45,7 +45,7 @@ void main()
 	cout << delimiter << endl;
 	Sort(Arr, ROWS, COLS); Print(Arr, ROWS, COLS);
 	cout << "\nСумма элементов масива :" << Sum(Arr, ROWS, COLS) << endl;
-	cout << "Среднее арифметическое элементов масива :" << Avg(Arr, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов масива :" << (double) Avg(Arr, ROWS, COLS) << endl;
 	cout << "Минимальное значение масива :" << MinValueIn(Arr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Arr, ROWS, COLS) << endl;
 	ShiftLeft(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
