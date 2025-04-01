@@ -49,7 +49,7 @@ void main()
 	cout << "Минимальное значение масива :" << MinValueIn(Arr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Arr, ROWS, COLS) << endl;
 	ShiftLeft(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
-	ShiftRight(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
+	ShiftRight(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS);
 
 	cout << delimiter << endl;
 	double Drr[ROWS][COLS];
