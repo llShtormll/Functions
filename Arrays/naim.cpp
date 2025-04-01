@@ -74,10 +74,10 @@ void main()
 	cout << "              Двумерный масив" << endl;
 
 	cout << delimiter << endl;
-	
 
 
-	
+
+
 	int i_arr_2[ROWS][COLS] =
 	{
 		{3,5,8},
@@ -89,7 +89,7 @@ void main()
 	Print(i_arr_2, ROWS, COLS);
 
 
-	
+
 }
 
 void FillRand(int arr[], const int n)
@@ -133,7 +133,7 @@ void Print(double arr[], const int n)
 }
 void Print(int i_arr_2[ROWS][COLS], const int ROWN, const int COLS)
 {
-	
+
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -162,7 +162,7 @@ void Sort(int arr[], const int n)
 		}
 
 	}
-} 
+}
 void Sort(double arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
