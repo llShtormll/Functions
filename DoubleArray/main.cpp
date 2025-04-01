@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
-const int ROWS = 3, COLS = 4;
-int t = 5;
+const int ROWS = 3;
+const int COLS = 4;
+const int Shift = 5;
 
 #define delimiter "\n---------------------------------------\n"
 
@@ -27,11 +28,11 @@ double MinValueIn(double rry[ROWS][COLS], const int ROWS, const int COLS);
 int MaxValueIn(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double MaxValueIn(double rry[ROWS][COLS], const int ROWS, const int COLS);
 
-void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int t);
-void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int t);
+void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
+void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
-void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int t);
-void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int t);
+void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
+void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
 void main()
 {
@@ -47,10 +48,10 @@ void main()
 	cout << "Среднее арифметическое элементов масива :" << Avg(Arr, ROWS, COLS) << endl;
 	cout << "Минимальное значение масива :" << MinValueIn(Arr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Arr, ROWS, COLS) << endl;
-	ShiftLeft(Arr, ROWS, COLS, t);
+	ShiftLeft(Arr, ROWS, COLS, Shift);
 	Print(Arr, ROWS, COLS);
 	Sort(Arr, ROWS, COLS);
-	ShiftRight(Arr, ROWS, COLS, t);
+	ShiftRight(Arr, ROWS, COLS, Shift);
 	Print(Arr, ROWS, COLS);
 		
 	cout << delimiter << endl;
@@ -64,10 +65,10 @@ void main()
 	cout << "Среднее арифметическое элементов масива :" << Avg(Drr, ROWS, COLS) << endl;
 	cout << "Минимальное значение масива :" << MinValueIn(Drr, ROWS, COLS) << endl;
 	cout << "Максимальное значение масива :" << MaxValueIn(Drr, ROWS, COLS) << endl;
-	ShiftLeft(Drr, ROWS, COLS, t);
+	ShiftLeft(Drr, ROWS, COLS, Shift);
 	Print(Drr, ROWS, COLS);
 	Sort(Drr, ROWS, COLS);
-	ShiftRight(Drr, ROWS, COLS, t);
+	ShiftRight(Drr, ROWS, COLS, Shift);
 	Print(Drr, ROWS, COLS);
 }
 
@@ -185,7 +186,7 @@ double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS)
 }
 int Avg(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
-	return Sum(arr, ROWS, COLS) / (ROWS * COLS);
+	return (double) Sum(arr, ROWS, COLS) / (ROWS * COLS);
 }
 double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS)
 {
@@ -241,10 +242,10 @@ double MaxValueIn(double arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 	return max;
 }
-void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int t)
+void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг влево--------------------" << endl;
-	for (int f = 0; f < t; f++)
+	for (int f = 0; f < Shift; f++)
 	{
 		int buf = arr[0][0];
 		for (int i = 0; i < ROWS; i++)
@@ -258,10 +259,10 @@ void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int t)
 		arr[ROWS - 1][COLS - 1] = buf;
 	}
 }
-void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int t)
+void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг влево--------------------" << endl;
-	for (int f = 0; f < t; f++)
+	for (int f = 0; f < Shift; f++)
 	{
 		double buf = arr[0][0];
 		for (int i = 0; i < ROWS; i++)
@@ -276,10 +277,10 @@ void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, int t)
 	}
 }
 
-void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int t)
+void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
-	for (int f = 0; f < (ROWS*COLS) - t; f++)
+	for (int f = 0; f < (ROWS*COLS) - Shift; f++)
 	{
 		int buf = arr[0][0];
 		for (int i = 0; i < ROWS; i++)
@@ -293,10 +294,10 @@ void ShiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int t)
 		arr[ROWS - 1][COLS - 1] = buf;
 	}
 }
-void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int t)
+void ShiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int Shoft)
 {
 	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
-	for (int f = 0; f < (ROWS * COLS) - t; f++)
+	for (int f = 0; f < (ROWS * COLS) - Shoft; f++)
 	{
 		double buf = arr[0][0];
 		for (int i = 0; i < ROWS; i++)
