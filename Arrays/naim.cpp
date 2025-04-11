@@ -22,6 +22,7 @@ void main()
 	ShiftRight(arr, n, t);
 	Print(arr, n);
 	cout << endl;
+
 	cout << endl;
 	const int SIZE = 10;
 	double brr[SIZE];
