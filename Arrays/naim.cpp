@@ -52,7 +52,7 @@ void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
 void main()
 {
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "RU");
 	const int n = 11;
 	int arr[n];
 	FillRand(arr, n);
@@ -60,8 +60,8 @@ void main()
 	cout << endl;
 	Sort(arr, n);
 	Print(arr, n);
-	cout << "Ñóììà ýëåìåíòîâ ìàñèâà :" << Sum(arr, n) << endl;;
-	cout << "Ñðåäíåå-àðèôìåòè÷åñêîå ýëåìåíòîâ ìàñèâà :" << Avg(arr, n) << endl;;
+	cout << "Сумма элементов масива :" << Sum(arr, n) << endl;;
+	cout << "Среднее арифметическое элементов масива :" << Avg(arr, n) << endl;;
 	cout << "Min :" << MinValueIn(arr, n) << endl;
 	cout << "Max :" << MaxValueIn(arr, n) << endl;
 	ShiftLeft(arr, n, 10);
@@ -74,8 +74,8 @@ void main()
 	double brr[SIZE];
 	FillRand(brr, SIZE);
 	Print(brr, SIZE);
-	cout << "Ñóììà ýëåìåíòîâ ìàñèâà :" << Sum(brr, SIZE) << endl;;
-	cout << "Ñðåäíåå-àðèôìåòè÷åñêîå  ýëåìåíòîâ ìàñèâà :" << Avg(brr, SIZE) << endl;;
+	cout << "Сумма элементов масива :" << Sum(brr, SIZE) << endl;;
+	cout << "Среднее арифметическое элементов масива :" << Avg(brr, SIZE) << endl;;
 	cout << endl;
 	cout << "Min :" << MinValueIn(brr, SIZE) << endl;
 	cout << "Max :" << MaxValueIn(brr, SIZE) << endl;
@@ -87,7 +87,7 @@ void main()
 	cout << endl;
 	Print(brr, SIZE);
 	cout << endl;
-	cout << "              Äâóìåðíûé ìàñèâ" << endl;
+	cout << "              Двумерный масив" << endl;
 
 	cout << delimiter << endl;
 
@@ -98,10 +98,10 @@ void main()
 	FillRand(Arr, ROWS, COLS); Print(Arr, ROWS, COLS);
 	cout << delimiter << endl;
 	Sort(Arr, ROWS, COLS); Print(Arr, ROWS, COLS);
-	cout << "\nÑóììà ýëåìåíòîâ ìàñèâà :" << Sum(Arr, ROWS, COLS) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàñèâà :" << (double)Avg(Arr, ROWS, COLS) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå ìàñèâà :" << MinValueIn(Arr, ROWS, COLS) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå ìàñèâà :" << MaxValueIn(Arr, ROWS, COLS) << endl;
+	cout << "\nСумма элементов масива :" << Sum(Arr, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов масива :" << (double)Avg(Arr, ROWS, COLS) << endl;
+	cout << "Минимальное значение элементов масива :" << MinValueIn(Arr, ROWS, COLS) << endl;
+	cout << "Максимальное значение элементов масива :" << MaxValueIn(Arr, ROWS, COLS) << endl;
 	ShiftLeft(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS); Sort(Arr, ROWS, COLS);
 	ShiftRight(Arr, ROWS, COLS, Shift); Print(Arr, ROWS, COLS);
 
@@ -110,10 +110,10 @@ void main()
 	FillRand(Drr, ROWS, COLS); Print(Drr, ROWS, COLS);
 	cout << delimiter << endl;
 	Sort(Drr, ROWS, COLS); Print(Drr, ROWS, COLS);
-	cout << "\nÑóììà ýëåìåíòîâ ìàñèâà :" << Sum(Drr, ROWS, COLS) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàñèâà :" << Avg(Drr, ROWS, COLS) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå ìàñèâà :" << MinValueIn(Drr, ROWS, COLS) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå ìàñèâà :" << MaxValueIn(Drr, ROWS, COLS) << endl;
+	cout << "\nСумма элементов масива :" << Sum(Drr, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов масива  :" << Avg(Drr, ROWS, COLS) << endl;
+	cout << "Минимальное значение элементов масива :" << MinValueIn(Drr, ROWS, COLS) << endl;
+	cout << "Максимальное значение элементов масива :" << MaxValueIn(Drr, ROWS, COLS) << endl;
 	ShiftLeft(Drr, ROWS, COLS, Shift); Print(Drr, ROWS, COLS); Sort(Drr, ROWS, COLS);
 	ShiftRight(Drr, ROWS, COLS, Shift); Print(Drr, ROWS, COLS);
 
@@ -340,7 +340,7 @@ void ShiftLeft(T arry[], const int n, int t)
 template<typename T>
 void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âëåâî--------------------" << endl;
+	cout << "\n---------------------Сдвиг влево--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		T buf = arr[0][0];
@@ -372,7 +372,7 @@ void ShiftRight(T arry[], const int n, int t)
 template<typename T>
 void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âïðàâî--------------------" << endl;
+	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		T buf = arr[ROWS - 1][COLS - 1];
