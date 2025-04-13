@@ -193,7 +193,6 @@ void Sort(T arr[], const int n)
 				arr[i] = arr[j];
 				arr[j] = buffer;
 
-			}
 
 		}
 
@@ -386,6 +385,4 @@ void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 		}
 		arr[0][0] = buf;
 
-	}
-}
 
