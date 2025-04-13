@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="naim.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx_1.h" />
+    <ClInclude Include="stdafx_2.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
