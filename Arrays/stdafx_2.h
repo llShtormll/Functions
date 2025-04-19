@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include"stdafx_1.h"
 
 using namespace std;
@@ -176,7 +176,7 @@ template<typename T>T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int CO
 
 template<typename T>void ShiftLeft(T arry[], const int n, int t)
 {
-	cout << "\n---------------------Ñäâèã âëåâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð»ÐµÐ²Ð¾--------------------" << endl;
 	for (int i = 1; i <= t; i++)
 	{
 		for (int j = 0; j < n - 1; j++)
@@ -189,7 +189,7 @@ template<typename T>void ShiftLeft(T arry[], const int n, int t)
 }
 template<typename T>void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âëåâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð»ÐµÐ²Ð¾--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		T buf = arr[0][0];
@@ -207,7 +207,7 @@ template<typename T>void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int 
 
 template<typename T>void ShiftRight(T arry[], const int n, int t)
 {
-	cout << "\n---------------------Ñäâèã âïðàâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð¿Ñ€Ð°Ð²Ð¾--------------------" << endl;
 	for (int i = 1; i <= t; i++)
 	{
 		for (int j = n - 2; j >= 0; j--)
@@ -220,7 +220,7 @@ template<typename T>void ShiftRight(T arry[], const int n, int t)
 }
 template<typename T>void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
-	cout << "\n---------------------Ñäâèã âïðàâî--------------------" << endl;
+	cout << "\n---------------------Ð¡Ð´Ð²Ð¸Ð³ Ð²Ð¿Ñ€Ð°Ð²Ð¾--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
 	{
 		T buf = arr[ROWS - 1][COLS - 1];
