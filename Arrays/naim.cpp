@@ -18,7 +18,7 @@ void main()
 	cout << "Среднее арифметическое элементов масива :" << Avg(arr, n) << endl;;
 	cout << "Min :" << MinValueIn(arr, n) << endl;
 	cout << "Max :" << MaxValueIn(arr, n) << endl;
-	ShiftLeft(arr, n, 10);
+	ShiftLeft(arr, n, 10); 
 	Print(arr, n);
 	ShiftRight(arr, n, 10);
 	Print(arr, n);
