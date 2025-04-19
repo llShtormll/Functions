@@ -18,9 +18,9 @@ void main()
 	cout << "Среднее арифметическое элементов масива :" << Avg(arr, n) << endl;;
 	cout << "Min :" << MinValueIn(arr, n) << endl;
 	cout << "Max :" << MaxValueIn(arr, n) << endl;
-	ShiftLeft(arr, n, 10); 
+	ShiftLeft(arr, n, 3); 
 	Print(arr, n);
-	ShiftRight(arr, n, 10);
+	ShiftRight(arr, n, 3);
 	Print(arr, n);
 	cout << endl;
 	cout << endl;
@@ -33,13 +33,14 @@ void main()
 	cout << endl;
 	cout << "Min :" << MinValueIn(brr, SIZE) << endl;
 	cout << "Max :" << MaxValueIn(brr, SIZE) << endl;
-	ShiftLeft(brr, SIZE, 10);
+	Sort(brr, SIZE);
 	Print(brr, SIZE);
-	ShiftRight(brr, SIZE, 10);
+	cout << endl;
+	ShiftLeft(brr, SIZE, 3);
+	Print(brr, SIZE); Sort(brr, SIZE);
+	ShiftRight(brr, SIZE, 3);
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
-	cout << endl;
-	Print(brr, SIZE);
 	cout << endl;
 	cout << "              Двумерный масив" << endl;
 
