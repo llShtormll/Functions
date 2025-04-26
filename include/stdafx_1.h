@@ -1,8 +1,5 @@
 ﻿#pragma once
-#include<iostream>
 #include"constants.h"
-
-using namespace std;
 
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);

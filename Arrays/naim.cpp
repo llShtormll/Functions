@@ -1,4 +1,5 @@
-﻿#include<iostream>
+﻿#ifdef DEBUG
+#include<iostream>
 #include"stdafx_2.h"
 using namespace std;
 #define delimiter "\n---------------------------------------\n"
@@ -18,7 +19,7 @@ void main()
 	cout << "Среднее арифметическое элементов масива :" << Avg(arr, n) << endl;;
 	cout << "Min :" << MinValueIn(arr, n) << endl;
 	cout << "Max :" << MaxValueIn(arr, n) << endl;
-	ShiftLeft(arr, n, 3); 
+	ShiftLeft(arr, n, 3);
 	Print(arr, n);
 	ShiftRight(arr, n, 3);
 	Print(arr, n);
@@ -75,3 +76,5 @@ void main()
 
 
 }
+
+#endif // DEBUG
