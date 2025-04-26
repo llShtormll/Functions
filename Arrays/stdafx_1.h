@@ -1,12 +1,14 @@
 ﻿#pragma once
+#include"constants.h"
 
-const int ROWS = 4;
-const int COLS = 5;
-const int Shift = 1;
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
+void FillRand(float arr[], const int n);
+void FillRand(short arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(short arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>void Print(T arr[], const int n);
 template<typename T>void Print(T arr[ROWS][COLS], const int ROWN, const int COLS);

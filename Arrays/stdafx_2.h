@@ -17,6 +17,20 @@ void FillRand(double arr[], const int n)
 		arr[i] = rand() % 10000;
 		arr[i] /= 100;
 	}
+}void FillRand(float arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 10000;
+		arr[i] /= 100;
+	}
+}void FillRand(short arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 10000;
+		arr[i] /= 100;
+	}
 }
 
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
@@ -30,6 +44,26 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand();
+			arr[i][j] /= 100;
+		}
+	}
+}void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand();
+			arr[i][j] /= 100;
+		}
+	}
+}void FillRand(short arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{

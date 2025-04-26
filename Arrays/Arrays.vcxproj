@@ -130,6 +130,7 @@
     <ClCompile Include="naim.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constants.h" />
     <ClInclude Include="stdafx_1.h" />
     <ClInclude Include="stdafx_2.h" />
   </ItemGroup>
