@@ -5,56 +5,45 @@ using namespace std;
 const int ROWS = 4;
 const int COLS = 5;
 const int Shift = 1;
+
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
+void FillRand(float arr[], const int n);
+void FillRand(short arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(short arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void Print(T arr[], const int n);
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWN, const int COLS);
-template<typename T>
-void Sort(T arr[], const int n);
-template<typename T>
-void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Print(T arr[], const int n);
+template<typename T>void Print(T arr[ROWS][COLS], const int ROWN, const int COLS);
+template<typename T>void Sort(T arr[], const int n);
+template<typename T>void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T Sum(T arr[], const int n);
-template<typename T>
-T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T Sum(T arr[], const int n);
+template<typename T>T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-double Avg(T arry[], const int n);
-template<typename T>
-double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>double Avg(T arry[], const int n);
+template<typename T>double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T MinValueIn(T arry[], const int n);
-template<typename T>
-T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T MinValueIn(T arry[], const int n);
+template<typename T>T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T MaxValueIn(T arry[], const int n);
-template<typename T>
-T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T MaxValueIn(T arry[], const int n);
+template<typename T>T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void ShiftLeft(T arry[], const int n, int t);
-template<typename T>
-void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
+template<typename T>void ShiftLeft(T arry[], const int n, int t);
+template<typename T>void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
-template<typename T>
-void ShiftRight(T arry[], const int n, int t);
-template<typename T>
-void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
+template<typename T>void ShiftRight(T arry[], const int n, int t);
+template<typename T>void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift);
 
 
 void main()
 {
 	setlocale(LC_ALL, "RU");
 	const int n = 11;
-	int arr[n];
+	float arr[n];
 	FillRand(arr, n);
 	Print(arr, n);
 	cout << endl;
@@ -128,6 +117,7 @@ void FillRand(int arr[], const int n)
 		arr[i] = rand() % 100;
 	}
 }
+
 void FillRand(double arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -136,7 +126,20 @@ void FillRand(double arr[], const int n)
 		arr[i] /= 100;
 	}
 }
-
+void FillRand(float arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 100;
+	}
+}
+void FillRand(short arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 100;
+	}
+}
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -158,16 +161,33 @@ void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS)
 		}
 	}
 }
-template<typename T>
-void Print(T arr[], const int n)
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() / 100;
+		}
+	}
+}void FillRand(short arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() / 100;
+		}
+	}
+}
+template<typename T>void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
 	}cout << endl;
 }
-template<typename T>
-void Print(T i_arr_2[ROWS][COLS], const int ROWN, const int COLS)
+template<typename T>void Print(T i_arr_2[ROWS][COLS], const int ROWN, const int COLS)
 {
 
 	for (int i = 0; i < ROWS; i++)
@@ -180,8 +200,7 @@ void Print(T i_arr_2[ROWS][COLS], const int ROWN, const int COLS)
 	}
 	cout << endl;
 }
-template<typename T>
-void Sort(T arr[], const int n)
+template<typename T>void Sort(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -199,8 +218,7 @@ void Sort(T arr[], const int n)
 
 	}
 }
-template<typename T>
-void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -222,29 +240,7 @@ void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 
 }
-void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			for (int f = 0; f < ROWS; f++)
-			{
-				for (int k = 0; k < COLS; k++)
-				{
-					if (arr[f][k] > arr[i][j])
-					{
-						double buffer = arr[i][j];
-						arr[i][j] = arr[f][k];
-						arr[f][k] = buffer;
-					}
-				}
-			}
-		}
-	}
-}
-template<typename T>
-T Sum(T arr[], const int n)
+template<typename T>T Sum(T arr[], const int n)
 {
 	T sum = 0;
 	for (int i = 0; i < n; i++)
@@ -253,8 +249,7 @@ T Sum(T arr[], const int n)
 	}
 	return sum;
 }
-template<typename T>
-T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	T sum = 0;
 	for (int i = 0; i < ROWS; i++)
@@ -266,18 +261,15 @@ T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 	return sum;
 }
-template<typename T>
-double Avg(T arry[], const int n)
+template<typename T>double Avg(T arry[], const int n)
 {
 	return (double)Sum(arry, n) / n;
 }
-template<typename T>
-double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	return (double)Sum(arr, ROWS, COLS) / (ROWS * COLS);
 }
-template<typename T>
-T MinValueIn(T arry[], const int n)
+template<typename T>T MinValueIn(T arry[], const int n)
 {
 
 	T min = arry[0];
@@ -287,8 +279,7 @@ T MinValueIn(T arry[], const int n)
 	}
 	return min;
 }
-template<typename T>
-T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	T min = arr[0][0];
 	for (int i = 0; i < ROWS; i++)
@@ -300,8 +291,7 @@ T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 	return min;
 }
-template<typename T>
-T MaxValueIn(T arry[], const int n)
+template<typename T>T MaxValueIn(T arry[], const int n)
 {
 	T max = arry[0];
 	for (int i = 0; i < n; i++)
@@ -310,8 +300,7 @@ T MaxValueIn(T arry[], const int n)
 	}
 	return max;
 }
-template<typename T>
-T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	T  max = arr[0][0];
 	for (int i = 0; i < ROWS; i++)
@@ -324,8 +313,7 @@ T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS)
 	return max;
 }
 
-template<typename T>
-void ShiftLeft(T arry[], const int n, int t)
+template<typename T>void ShiftLeft(T arry[], const int n, int t)
 {
 	for (int i = 1; i <= t; i++)
 	{
@@ -337,8 +325,7 @@ void ShiftLeft(T arry[], const int n, int t)
 		}
 	}
 }
-template<typename T>
-void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
+template<typename T>void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг влево--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
@@ -356,8 +343,7 @@ void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 	}
 }
 
-template<typename T>
-void ShiftRight(T arry[], const int n, int t)
+template<typename T>void ShiftRight(T arry[], const int n, int t)
 {
 	for (int i = 1; i <= t; i++)
 	{
@@ -369,8 +355,7 @@ void ShiftRight(T arry[], const int n, int t)
 		}
 	}
 }
-template<typename T>
-void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
+template<typename T>void ShiftRight(T arr[ROWS][COLS], const int ROWS, const int COLS, int Shift)
 {
 	cout << "\n---------------------Сдвиг вправо--------------------" << endl;
 	for (int f = 0; f < Shift; f++)
