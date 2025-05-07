@@ -1,5 +1,15 @@
 ﻿#include<iostream>
-#include"stdafx_2.h"
+#include"FillRand.h"
+#include"Min_Max_Value_In.h"
+#include"Min_Max_Value_In.cpp"
+#include"Print.h"
+#include"Print.cpp"
+#include"Sort.h"
+#include"Sort.cpp"
+#include"Shift_Left_Right.h"
+#include"Shift_Left_Right.cpp"
+#include"Sum_Avg.h"
+#include"Sum_Avg.cpp"
 using namespace std;
 #define delimiter "\n---------------------------------------\n"
 

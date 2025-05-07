@@ -127,12 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FillRand.cpp" />
+    <ClCompile Include="Min_Max_Value_In.cpp" />
     <ClCompile Include="naim.cpp" />
+    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="Shift_Left_Right.cpp" />
+    <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="Sum_Avg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h" />
-    <ClInclude Include="stdafx_1.h" />
-    <ClInclude Include="stdafx_2.h" />
+    <ClInclude Include="FillRand.h" />
+    <ClInclude Include="Min_Max_Value_In.h" />
+    <ClInclude Include="Print.h" />
+    <ClInclude Include="Shift_Left_Right.h" />
+    <ClInclude Include="Sort.h" />
+    <ClInclude Include="Sum_Avg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
